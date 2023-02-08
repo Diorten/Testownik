@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Testownik+</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" charset="utf-8"></script>
+        <script>
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#" class="logo">Testownik+</a>
+            <ul>
+                <li><a href="#" id="main_s" class="active">Strona główna</a></li>
+                <li><a href="#sec" id="info" class="">Informacje</a></li>
+                <li><a href="game/game.html" id="game" class="">Graj</a></li>
+                <li><a href="#con" id="contact" class="">Kontakt</a></li>
+            </ul>
+        </header>
+        <section>
+            <h2 id="text">Testownik+</h3>
+            <a href="#sec" id="btn">Sprawdź</a>
+        </section>
+        <div class="sec" id="sec">
+            <h2>Testownik+</h2>
+            <p>Pomysł na ten projekt powstał w trakcie studiów, podczas nauki do sesji. Testownik+ pozwala na naukę przez zabawę - przykładowo do sprawdzianów czy egzaminów. Oczywiście możecie wgrywać własne pytania i bawić się w każdy możliwy sposób. Planuję dodać możliwość "zapisywania" do bazy pytań, abyście mogli sami stworzyć kategorie dla innych! Projekt w trakcie rozbudowy, zwłaszcza że nie umiem node.js XDD</p>
+            <a href="game/game.html" id="gm_btn">Zagraj</a>
+        </div>
+        <div class="con" id="con">
+            <h2>Kontakt</h2>
+            <p>Github:</p>
+            <p>Mail:</p>
+            <p>Discord:</p>
+        </div>
+
+        <script>
+            var main_s = document.getElementById('main_s')
+            let info = document.getElementById('info')
+            let game = document.getElementById('game')
+            let contact = document.getElementById('contact')
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+
+                if (value < 10)
+                {
+                    info.classList.remove('active')
+                    main_s.classList.add('active')
+                }
+                else if (value >= 10 && value < 100)
+                {
+                    main_s.classList.remove('active')
+                    info.classList.add('active')
+                }
+            })
+        </script>
+    </body>
+</html>
